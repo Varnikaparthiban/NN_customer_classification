@@ -14,8 +14,7 @@ You are required to help the manager to predict the right group of the new custo
 
 ## Neural Network Model
 
-<img width="436" height="698" alt="image" src="https://github.com/user-attachments/assets/98ed159c-47e9-40e6-81d2-b0138e0568b5" />
-
+<img width="430" height="412" alt="image" src="https://github.com/user-attachments/assets/40823aa8-7f7d-4173-a395-8f5721392fde" />
 
 
 ## DESIGN STEPS
@@ -52,15 +51,13 @@ Save the trained model, export it if needed, and deploy it for real-world use.
 class PeopleClassifier(nn.Module):
     def __init__(self, input_size):
         super(PeopleClassifier, self).__init__()
-        self.fc1 = nn.Linear(input_size, 32)
-        self.fc2 = nn.Linear(32, 16)
-        self.fc3 = nn.Linear(16, 8)
-        self.fc4 = nn.Linear(8, 4)
+        self.fc1 = nn.Linear(input_size, 16)
+        self.fc2 = nn.Linear(16, 8)
+        self.fc3 = nn.Linear(8, 4)
     def forward(self, x):
-        x=F.relu(self.fc1(x))
-        x=F.relu(self.fc2(x))
-        x=F.relu(self.fc3(x))
-        x=self.fc4(x)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
         return x
 ```
 ```python
